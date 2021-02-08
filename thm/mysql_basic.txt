@@ -1,0 +1,79 @@
+MySQL
+	创建数据库 create database 数据库名
+	删除数据库 drop database 数据库名
+	创建数据表 create table table_name(column_name column_type)
+	删除数据表 drop table table_name
+	插入数据 insert into table_name(field1, field2,...fieldN)
+	        	values 
+	        	(values1, values2,...valuesN)
+	查询数据 select column_name, column_name
+			from table_name
+			[where clause]条件
+			[limit N]返回记录数
+			[offset M]查询数据偏移量
+	update更新 update table_name set field1=new-value1, field=new-value2
+			[where clause]
+	delete语句 delete from table_name [where clause]
+	like语句 select field1, field2,...fieldN
+			from table_name
+			where field1 like condition1[and[or]] field2='somevalue'
+	union操作符（索引） select expression1, expression2,...expression_n要检索的列
+					from tables要检索的数据表
+					[where conditions]
+					union [all | distinct]
+	排序 select field1, field2,...fieldN from table_name1, table_name2...
+		order by field1 [asc[desc], field2 [asc[desc]		asc升序desc降序		
+	group by语句 select column_name, function(column_name)
+				from table_name
+				where column_name operator value
+				group by column_name
+	连接  inner join(内连接，或等值连接）：获取两个表中字段匹配关系的记录
+		left join(左连接)：获取左表所有记录，即使右表没有对应匹配的记录
+		right join(右连接)：与left join相反
+	alter命令（修改数据表名或修改数据表字段）
+		删除创建表的i字段
+			alter table testalter_tbl drop i
+		添加i字段并定义类型
+			alter table testalter_tbl add i int
+		修改字段类型及名称
+			alter able testalter_tbl change i j bigint
+		对NULL和默认值
+			alter table testalter_tbl 
+				modify j bigint not null default 默认值
+		修改表名
+			alter table testalter_tbl rename to alter_tbl		
+	索引
+		创建索引
+			create index indexname on table_name(column_name)	
+		添加索引
+			alter table tablename add index indexname(column_name)
+		删除索引
+			drop index [indexname] on mytable
+		显示索引信息
+			show index from table_name
+			
+				
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+					
+			
